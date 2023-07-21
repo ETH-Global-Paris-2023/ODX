@@ -1,2 +1,2 @@
-# DDX
-ETH Global Hackathon 2023 Submitted Project "DDX"
+# ODX
+ETH Global Hackathon 2023 Submitted Project "ODX"
