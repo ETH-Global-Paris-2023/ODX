@@ -30,6 +30,7 @@ const ODX = styled.div`
           margin: 0px 20px 0px 20px;
           padding: 5px 20px 5px 20px;
           border-radius: 20px;
+          border: none;
           background: #565568;
           font-size: 16px;
           font-weight: 600;
@@ -265,7 +266,7 @@ const ODX = styled.div`
         }
       }
       .chart {
-
+        
         .image {
 
         }
@@ -277,7 +278,7 @@ const ODX = styled.div`
 State.init({
   imports: {},
   chainId: undefined,
-  walletConnected: false,
+  connected: false,
   address: undefined,
   orderType: "market",
   orderAction: "buy",
@@ -324,7 +325,6 @@ const onOrderActionBuy = (e) => {
     orderAction: "buy",
   });
 };
-const onConnect = (e) => {};
 const onConfirm = (e) => {
   console.log("confirmed");
 };
@@ -367,6 +367,39 @@ const priceComponent =
   ) : null;
 
 /*
+ Main
+ */
+
+if (Ethers.provider()) {
+  const signer = Ethers.provider().getSigner();
+
+  signer.getAddress().then((address) => {
+    State.update({
+      address,
+      connected: true,
+    });
+
+    if (state.balance === undefined) {
+      Ethers.provider()
+        .getBalance(address)
+        .then((balance) => {
+          State.update({
+            balance: balance.toString(),
+          });
+        });
+    }
+  });
+
+  Ethers.provider()
+    .getNetwork()
+    .then((chainIdData) => {
+      if (chainIdData?.chainId) {
+        State.update({ chainId: chainIdData.chainId });
+      }
+    });
+}
+
+/*
  Render
  */
 
@@ -378,9 +411,7 @@ return (
           <img class="image" src="https://i.imgur.com/srQIMqd.png" />
         </div>
         <div class="blank"></div>
-        <div class="connect-btn" onClick={onConnect}>
-          Connect
-        </div>
+        <Web3Connect className="connect-btn" connectLabel="Connect" />
       </div>
       <div class="content">
         <div class="order-box">
