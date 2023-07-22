@@ -1,0 +1,98 @@
+[
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "orderIdA",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "orderIdB",
+					"type": "uint256"
+				}
+			],
+			"name": "fillOrders",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"name": "orders",
+			"outputs": [
+				{
+					"internalType": "address",
+					"name": "receiver",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "tokenIn",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "tokenOut",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "tokenInAmount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "price",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "view",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "address",
+					"name": "receiver",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "tokenIn",
+					"type": "address"
+				},
+				{
+					"internalType": "address",
+					"name": "tokenOut",
+					"type": "address"
+				},
+				{
+					"internalType": "uint256",
+					"name": "tokenInAmount",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "price",
+					"type": "uint256"
+				}
+			],
+			"name": "pushOrderLiquidity",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
