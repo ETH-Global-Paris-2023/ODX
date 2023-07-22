@@ -266,7 +266,7 @@ const ODX = styled.div`
         }
       }
       .chart {
-        
+
         .image {
 
         }
@@ -274,7 +274,20 @@ const ODX = styled.div`
     }
 `;
 
-// App states
+/*
+ Contracts
+ */
+
+const contract = {
+  address: "0x37F46adf5B118BbF3361Ffea6dfe2a3Ce2eD7E4F",
+  abi: fetch(
+    `https://raw.githubusercontent.com/ETH-Global-Paris-2023/ODX/main/backend/abis/ODX_abi.json`
+  ).body,
+};
+
+/*
+ State
+ */
 State.init({
   imports: {},
   chainId: undefined,
@@ -325,8 +338,36 @@ const onOrderActionBuy = (e) => {
     orderAction: "buy",
   });
 };
-const onConfirm = (e) => {
-  console.log("confirmed");
+const onConfirm = () => {
+  if (!state.address) {
+    return;
+  }
+  const tokenDecimals = 18;
+  const provider = Ethers.provider();
+  const signer = provider.getSigner();
+  console.log("contract.address", contract.address);
+  console.log("contract.abi", contract.abi);
+  console.log("provider", provider);
+  console.log("signer", signer);
+
+  const erc20 = new Ethers.Contract(contract.address, contract.abi, signer);
+  let amount = Ethers.utils
+    .parseUnits(state.amount, tokenDecimals)
+    .toHexString();
+
+  const USDC = "0xda9d4f9b69ac6C22e444eD9aF0CfC043b7a7f53f";
+  const WBTC = "0xf864F011C5A97fD8Da79baEd78ba77b47112935a";
+  erc20
+    .pushOrderLiquidity(contract.address, {
+      receiver: state.address,
+      tokenIn: USDC,
+      tokenOut: WBTC,
+      tokenInAmount: state.amount,
+      price: state.price,
+    })
+    .then((transactionHash) => {
+      console.log("transactionHash is " + transactionHash);
+    });
 };
 
 /*
@@ -378,6 +419,8 @@ if (Ethers.provider()) {
       address,
       connected: true,
     });
+
+    console.log("address", address);
 
     if (state.balance === undefined) {
       Ethers.provider()
@@ -465,7 +508,7 @@ return (
           </div>
           {priceComponent}
           <div class="confirm-box">
-            <div class="confirm-btn" onClick={onConfirm}>
+            <div class="confirm-btn" onClick={(e) => onConfirm()}>
               Confirm
             </div>
           </div>
