@@ -6,3 +6,8 @@
 [submodule "backend/on-chain/lib/forge-std"]
 	path = backend/on-chain/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "backend/on-chain/lib/openzeppelin-contracts"]
+	path = backend/on-chain/lib/openzeppelin-contracts
+	url = https://github.com/openzeppelin/openzeppelin-contracts
+[submodule "lib/openzeppelin-contracts"]
+	branch = v4.9.2
