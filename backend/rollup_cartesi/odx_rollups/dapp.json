@@ -1,0 +1,5 @@
+{
+  "fs": {
+    "files": ["odx_rollups.py", "entrypoint.sh"]
+  }
+}
