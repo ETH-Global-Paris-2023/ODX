@@ -39,7 +39,7 @@ To execute order market functionality, the 1inch Fusion SDK is utilized. The SDK
 
 ## ODX Whitepaper
 
-You can access our whitepaper directly using this link: INSERT HERE
+You can access our whitepaper directly using this link: [Link](https://docs.google.com/document/d/1efI3wY2DR2JCLNn4cRZ3XMj9uWYlwWINv6NlqFZkmWs/edit?usp=sharing)
 
 ## Usage
 
@@ -97,7 +97,6 @@ Encountered an error verifying this contract:
 Response: `NOTOK`
 Details: `Error!`
 ```
-
 
 ## ODX addresses
 
