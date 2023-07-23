@@ -310,7 +310,7 @@ const onAmountChange = ({ target }) => {
 };
 const onMaxClick = (e) => {
   State.update({
-    amount: 1000,
+    amount: "1000",
   });
 };
 const onPriceChange = ({ target }) => {
