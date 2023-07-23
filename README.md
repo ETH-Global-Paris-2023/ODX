@@ -47,6 +47,14 @@ To use ODX, follow these steps:
 2. Access the appropriate folders based on your desired functionality (order limit or market).
 3. Follow the instructions within each folder to execute and interact with the relevant components.
 
+### Polygon zkEVM
+
+To deploy on the Polygon : 
+>forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url 
+>${RPC_URL_POLYGON_ZKTEST} --verifier-url 
+>${VERIFIER_URL_POLYGON_ZKTEST} --etherscan-api-key 
+>${POLYGON_ZK_TESTNET_ETHERSCAN_API_KEY} --verify --legacy
+
 ## Disclaimer
 ODX is an ongoing project, and the code provided in this repository may undergo updates and improvements over time. It is essential to ensure you are using the latest version for optimal performance and security.
 
