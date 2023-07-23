@@ -1,6 +1,8 @@
 # ODX (Orderbook Decentralized Exchange) 🧮
 
-ODX (Orderbook Decentralized Exchange) is a decentralized exchange (DEX) that originated from a hackathon event. Powered by Cartesi's rollup technology, ODX executes order matching on-chain, creating a fully decentralized orderbook operating on every EVM-compatible chain.
+![ODX](https://github.com/ETH-Global-Paris-2023/ODX/blob/main/screenshots/odx-screen-001.png)
+
+ODX is a decentralized exchange (DEX) that originated from a hackathon event. Powered by Cartesi's rollup technology, ODX executes order matching on-chain, creating a fully decentralized orderbook operating on every EVM-compatible chain.
 
 ## Introduction
 
@@ -10,7 +12,7 @@ ODX's main application is its on-chain orderbook and matching engine. Users can 
 
 ### Market Order
 
-ODX's also allows for market order execution thourgh the 1inch Fusion Swap Solution integrated into our dApp. Users are required to deposit funds before placing the order. When an order is placed, it is direclty executed and the best prices are found thanks to 1inch Fusion. 
+ODX's also allows for market order execution thourgh the 1inch Fusion Swap Solution integrated into our dApp. Users are required to deposit funds before placing the order. When an order is placed, it is direclty executed and the best prices are found thanks to 1inch Fusion.
 
 ## Folder Structure
 
@@ -65,11 +67,11 @@ ODX has been built during the ETH Global Paris Hackathon and the team had the op
 
 ### Polygon zkEVM
 
-To deploy on the Polygon : 
+To deploy on the Polygon :
 ```
-forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url 
->${RPC_URL_POLYGON_ZKTEST} --verifier-url 
->${VERIFIER_URL_POLYGON_ZKTEST} --etherscan-api-key 
+forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url
+>${RPC_URL_POLYGON_ZKTEST} --verifier-url
+>${VERIFIER_URL_POLYGON_ZKTEST} --etherscan-api-key
 >${POLYGON_ZK_TESTNET_ETHERSCAN_API_KEY} --verify --legacy
 ```
 
@@ -79,9 +81,9 @@ The quicknode RPC used on this network : https://shy-distinguished-meadow.zkevm-
 
 The contract on Celo was deployed succesfully via foundry thanks to the following command :
 ```
-forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url 
-${CELO_ALFA_TESTNET_RPC_URL} --verifier-url 
-${VERIFIER_URL_CELO_ALFA_TESTNET} --etherscan-api-key 
+forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url
+${CELO_ALFA_TESTNET_RPC_URL} --verifier-url
+${VERIFIER_URL_CELO_ALFA_TESTNET} --etherscan-api-key
 ${ETHERSCAN_API_KEY} --verify --legacy
 ```
 
