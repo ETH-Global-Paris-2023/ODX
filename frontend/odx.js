@@ -295,8 +295,8 @@ State.init({
   address: undefined,
   orderType: "market",
   orderAction: "buy",
-  amount: 12,
-  price: 0.2,
+  amount: "12",
+  price: "13",
 });
 
 /*
@@ -350,21 +350,22 @@ const onConfirm = () => {
   console.log("provider", provider);
   console.log("signer", signer);
 
-  const erc20 = new Ethers.Contract(contract.address, contract.abi, signer);
-  let amount = Ethers.utils
+  const erc20 = new ethers.Contract(contract.address, contract.abi, signer);
+  let amount = ethers.utils
     .parseUnits(state.amount, tokenDecimals)
     .toHexString();
 
   const USDC = "0xda9d4f9b69ac6C22e444eD9aF0CfC043b7a7f53f";
   const WBTC = "0xf864F011C5A97fD8Da79baEd78ba77b47112935a";
+
   erc20
-    .pushOrderLiquidity(contract.address, {
-      receiver: state.address,
-      tokenIn: USDC,
-      tokenOut: WBTC,
-      tokenInAmount: state.amount,
-      price: state.price,
-    })
+    .pushOrderLiquidity(
+      state.address,
+      USDC,
+      WBTC,
+      ethers.utils.parseUnits(state.amount, tokenDecimals),
+      ethers.utils.parseUnits(state.price, tokenDecimals)
+    )
     .then((transactionHash) => {
       console.log("transactionHash is " + transactionHash);
     });
