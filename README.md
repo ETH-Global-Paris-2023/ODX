@@ -1,6 +1,6 @@
 # ODX (Orderbook Decentralized Exchange) 🧮
 
-![ODX](https://github.com/ETH-Global-Paris-2023/ODX/blob/main/screenshots/odx-screen-001.png)
+![ODX](https://raw.github.com/ETH-Global-Paris-2023/ODX/main/screenshots/odx-screen-001.png)
 
 ODX is a decentralized exchange (DEX) that originated from a hackathon event. Powered by Cartesi's rollup technology, ODX executes order matching on-chain, creating a fully decentralized orderbook operating on every EVM-compatible chain.
 
