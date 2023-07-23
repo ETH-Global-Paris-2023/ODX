@@ -47,6 +47,22 @@ To use ODX, follow these steps:
 2. Access the appropriate folders based on your desired functionality (order limit or market).
 3. Follow the instructions within each folder to execute and interact with the relevant components.
 
+# Technology / Solutions used
+
+ODX has been built during the ETH Global Paris Hackathon and the team had the opportunity to combine many innovative solutions to create ODX.
+
+- Cartesi, an application specific rollup on linux runtime.
+- Quicknode, particulary leveraging their RPC.
+- 1inch, integrating their Fusion swap solution.
+- EVM Neon
+- Gnosis
+- Near, leveraging their Blockchain Operating System to deploy our Front-end for a full decentralized dApp interaction user experience.
+- Mantle
+- Polygon
+- Zetachain
+- Celo
+- Walletconnect, using their web3modal solution for allowing users to connect their wallets and interact with our dApp.
+
 ### Polygon zkEVM
 
 To deploy on the Polygon : 
@@ -54,6 +70,15 @@ To deploy on the Polygon :
 >${RPC_URL_POLYGON_ZKTEST} --verifier-url 
 >${VERIFIER_URL_POLYGON_ZKTEST} --etherscan-api-key 
 >${POLYGON_ZK_TESTNET_ETHERSCAN_API_KEY} --verify --legacy
+
+The quicknode RPC used on this network : https://shy-distinguished-meadow.zkevm-testnet.discover.quiknode.pro/api_key
+
+## ODX addresses
+
+### Our smart contracts
+| Contract  | Contract address |
+| --------- | --------------- |
+| ODX Polygon zkEVM | [0x1ebfbbd3b97ebdbf946d1781ee559a986098ec98](https://testnet-zkevm.polygonscan.com/address/0xc9217932acfFeb6019313ff7126365d8aE03AF04) |
 
 ## Disclaimer
 ODX is an ongoing project, and the code provided in this repository may undergo updates and improvements over time. It is essential to ensure you are using the latest version for optimal performance and security.
