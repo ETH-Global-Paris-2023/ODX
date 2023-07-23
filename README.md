@@ -10,6 +10,7 @@ ODX's main application is its on-chain orderbook and matching engine. Users can 
 
 ### Market Order
 
+ODX's also allows for market order execution thourgh the 1inch Fusion Swap Solution integrated into our dApp. Users are required to deposit funds before placing the order. When an order is placed, it is direclty executed and the best prices are found thanks to 1inch Fusion. 
 
 ### Folder Structure
 
