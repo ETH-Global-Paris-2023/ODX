@@ -66,12 +66,36 @@ ODX has been built during the ETH Global Paris Hackathon and the team had the op
 ### Polygon zkEVM
 
 To deploy on the Polygon : 
->forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url 
+```
+forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url 
 >${RPC_URL_POLYGON_ZKTEST} --verifier-url 
 >${VERIFIER_URL_POLYGON_ZKTEST} --etherscan-api-key 
 >${POLYGON_ZK_TESTNET_ETHERSCAN_API_KEY} --verify --legacy
+```
 
 The quicknode RPC used on this network : https://shy-distinguished-meadow.zkevm-testnet.discover.quiknode.pro/api_key
+
+### Celo
+
+The contract on Celo was deployed succesfully via foundry thanks to the following command :
+```
+forge script script/ODXScript.s.sol:ODXScript --broadcast --rpc-url 
+${CELO_ALFA_TESTNET_RPC_URL} --verifier-url 
+${VERIFIER_URL_CELO_ALFA_TESTNET} --etherscan-api-key 
+${ETHERSCAN_API_KEY} --verify --legacy
+```
+
+But we were unable to verify the contract, here is what we were shown :
+```
+Start verification for (1) contracts
+Start verifying contract `0xa2ee5d4dbc5e4a717caccccbf33eec2c2b943f96` deployed on celo-alfajores
+
+Submitting verification for [src/ODX.sol:ODX] "0xA2eE5D4dbc5e4A717cAccccBF33EEC2c2B943F96".
+Encountered an error verifying this contract:
+Response: `NOTOK`
+Details: `Error!`
+```
+
 
 ## ODX addresses
 
@@ -79,6 +103,10 @@ The quicknode RPC used on this network : https://shy-distinguished-meadow.zkevm-
 | Contract  | Contract address |
 | --------- | --------------- |
 | ODX Polygon zkEVM | [0x1ebfbbd3b97ebdbf946d1781ee559a986098ec98](https://testnet-zkevm.polygonscan.com/address/0xc9217932acfFeb6019313ff7126365d8aE03AF04) |
+| ODX Celo | [0xa2ee5d4dbc5e4a717caccccbf33eec2c2b943f96](https://alfajores.celoscan.io/address/0xa2ee5d4dbc5e4a717caccccbf33eec2c2b943f96) |
+
+- Polygon contract was verified on Foundry
+- Celo contract was verified on Sourcify (and not on the explorer): https://repo.sourcify.dev/contracts/full_match/44787/0xc9217932acfFeb6019313ff7126365d8aE03AF04/
 
 ## Disclaimer
 ODX is an ongoing project, and the code provided in this repository may undergo updates and improvements over time. It is essential to ensure you are using the latest version for optimal performance and security.
