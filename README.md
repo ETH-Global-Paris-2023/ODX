@@ -107,6 +107,7 @@ Details: `Error!`
 | ODX Polygon zkEVM | [0x1ebfbbd3b97ebdbf946d1781ee559a986098ec98](https://testnet-zkevm.polygonscan.com/address/0xc9217932acfFeb6019313ff7126365d8aE03AF04) |
 | ODX Celo | [0xa2ee5d4dbc5e4a717caccccbf33eec2c2b943f96](https://alfajores.celoscan.io/address/0xa2ee5d4dbc5e4a717caccccbf33eec2c2b943f96) |
 | ODX Gnosis (Mainnet) | [0xc9217932acffeb6019313ff7126365d8ae03af04](https://gnosisscan.io/address/0xc9217932acffeb6019313ff7126365d8ae03af04) |
+| ODX MANTLE | [0x490efef2d6311809c7f6d06e68d7efec63ed6942](https://explorer.testnet.mantle.xyz/address/0x490EfeF2d6311809c7f6d06E68D7efec63Ed6942) |
 
 - Polygon contract was verified on Foundry
 - Celo contract was verified on Sourcify (and not on the explorer): https://repo.sourcify.dev/contracts/full_match/44787/0xc9217932acfFeb6019313ff7126365d8aE03AF04/
