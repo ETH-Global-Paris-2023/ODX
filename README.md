@@ -35,6 +35,10 @@ Users can store their order limit on the blockchain through the custom rollup in
 2. **Order Market Execution:**
 To execute order market functionality, the 1inch Fusion SDK is utilized. The SDK is triggered through the ./apis folder. For better integration, a frontend component can be developed to streamline the process.
 
+### ODX Whitepaper
+
+You can access our whitepaper directly using this link: INSERT HERE
+
 ### Usage
 
 To use ODX, follow these steps:
