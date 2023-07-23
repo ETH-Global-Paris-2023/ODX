@@ -12,7 +12,7 @@ ODX's main application is its on-chain orderbook and matching engine. Users can 
 
 ODX's also allows for market order execution thourgh the 1inch Fusion Swap Solution integrated into our dApp. Users are required to deposit funds before placing the order. When an order is placed, it is direclty executed and the best prices are found thanks to 1inch Fusion. 
 
-### Folder Structure
+## Folder Structure
 
 The application is divided into different folders, each serving a specific purpose:
 
@@ -25,7 +25,7 @@ In this folder, users can find the bots service, enabling anyone to run these bo
 3. **./apis:**
 This folder triggers the 1inch Fusion SDK for order market functionality. A recommended practice is to create a frontend component that integrates the SDK initially.
 
-### Order Execution
+## Order Execution
 
 For order execution, ODX provides two distinct methods:
 
@@ -35,11 +35,11 @@ Users can store their order limit on the blockchain through the custom rollup in
 2. **Order Market Execution:**
 To execute order market functionality, the 1inch Fusion SDK is utilized. The SDK is triggered through the ./apis folder. For better integration, a frontend component can be developed to streamline the process.
 
-### ODX Whitepaper
+## ODX Whitepaper
 
 You can access our whitepaper directly using this link: INSERT HERE
 
-### Usage
+## Usage
 
 To use ODX, follow these steps:
 
@@ -47,13 +47,13 @@ To use ODX, follow these steps:
 2. Access the appropriate folders based on your desired functionality (order limit or market).
 3. Follow the instructions within each folder to execute and interact with the relevant components.
 
-### Disclaimer
+## Disclaimer
 ODX is an ongoing project, and the code provided in this repository may undergo updates and improvements over time. It is essential to ensure you are using the latest version for optimal performance and security.
 
-### Contributing
+## Contributing
 If you wish to contribute to the development of ODX, feel free to fork this repository and submit pull requests with your proposed changes. We appreciate community involvement in making ODX a better and more robust decentralized application.
 
-### License
+## License
 ODX is licensed under **MIT License**. Feel free to use, modify, and distribute the code within the guidelines of the license.
 
 Happy trading with ODX!
