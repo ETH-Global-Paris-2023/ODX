@@ -108,6 +108,7 @@ Details: `Error!`
 
 - Polygon contract was verified on Foundry
 - Celo contract was verified on Sourcify (and not on the explorer): https://repo.sourcify.dev/contracts/full_match/44787/0xc9217932acfFeb6019313ff7126365d8aE03AF04/
+- Gnosis contract has been verified
 
 ## Disclaimer
 ODX is an ongoing project, and the code provided in this repository may undergo updates and improvements over time. It is essential to ensure you are using the latest version for optimal performance and security.
